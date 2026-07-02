@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>📊 Dashboard</h1>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>👨‍🎓 Total Students</h2>
+        <h1>{{ total_students }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>📝 Marks Records</h2>
+        <h1>{{ total_marks }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>🏆 Highest Percentage</h2>
+        <h1>{{ highest_percentage }}%</h1>
+    </div>
+
+    <div class="card">
+        <h2>📈 Average Percentage</h2>
+        <h1>{{ average_percentage }}%</h1>
+    </div>
+    
+    <div class="card">
+    <h2>🏆 Class Topper</h2>
+    {% if topper %}
+        <h3>{{ topper[0] }}</h3>
+        <p>Percentage: {{ topper[1] }}%</p>
+        <p>Grade: {{ topper[2] }}</p>
+    {% else %}
+        <p>No Marks Available</p>
+    {% endif %}
+    </div>
+</div>
+
+<br><br>
+
+<center>
+<a href="/">
+<button>🏠 Home</button>
+</a>
+</center>
+</body>
+</html>

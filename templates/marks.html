@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Marks</title>
+    <head>
+    <title>Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+<body>
+
+    <h1>Student Marks</h1>
+
+    <table border="1" cellpadding="10">
+
+    <tr>
+        <th>ID</th>
+        <th>Student ID</th>
+        <th>C</th>
+        <th>Python</th>
+        <th>DBMS</th>
+        <th>Java</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+    </tr>
+
+    {% for row in marks %}
+
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+        <td>{{ row[8] }}</td>
+    </tr>
+
+    {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    <a href="/">
+        <button>Home</button>
+    </a>
+
+</body>
+</html>

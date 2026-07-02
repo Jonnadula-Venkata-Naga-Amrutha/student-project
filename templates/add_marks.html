@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Marks</title>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+
+<body>
+
+<h1>Add Marks</h1>
+
+<form action="/save_marks" method="POST">
+
+Student ID:
+<input type="number" name="student_id">
+
+<br><br>
+
+C Programming:
+<input type="number" name="c_marks">
+
+<br><br>
+
+Python:
+<input type="number" name="python_marks">
+
+<br><br>
+
+DBMS:
+<input type="number" name="dbms_marks">
+
+<br><br>
+
+Java:
+<input type="number" name="java_marks">
+
+<br><br>
+
+<button type="submit">
+Save Marks
+</button>
+
+</form>
+
+</body>
+</html>
